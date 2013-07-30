@@ -1,6 +1,17 @@
 class Person
-  def initialize(height, weight, age, sex)
-    if sex == "m" or sex == "f" then
+  def initialize(first_name, last_name, height, weight, age, sex)
+    if !first_name.empty? and
+        !last_name.empty? then
+      @first_name = "Anonymous"
+      @last_name  = ""
+    else
+      @first_name = first_name
+      @last_name  = last_name
+    end
+
+
+    if sex == "m" or
+        sex == "f" then
       @sex = sex
     else
       raise ArgumentsError, "sex must be an 'm' or 'f'"
@@ -21,6 +32,16 @@ class Person
     end
   end
 
+
+
+  def first_name
+    @first_name
+  end
+
+
+  def last_name
+    @last_name
+  end
 
 
   def height
