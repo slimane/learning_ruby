@@ -1,8 +1,9 @@
 module ValueCheck
-  def is_numeric(variable)
+  def numeric?(variable)
     variable.kind_of?(Numeric)
   end
 end
+
 
 
 

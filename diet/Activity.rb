@@ -7,8 +7,8 @@ include ValueCheck
 
 class Activity
   def initialize(speed, minutes)
-    if is_numeric(speed) and
-        is_numeric(minutes) then
+    if numeric?(speed) and
+        numeric?(minutes) then
       @speed   = speed
       @minutes = minutes
     else
