@@ -13,6 +13,18 @@ module Calorie
 
 
 
+  # energy translation
+  def translatre_joule_to_calorie(joule)
+    0.239005736 * joule
+  end
+
+
+  def translate_calorie_to_joule(calorie)
+    4.18400 * calorie
+  end
+
+
+
 
 
   def calc_run_calorie_distance(speed, distance)
@@ -37,3 +49,5 @@ module Calorie
     end
   end
 end
+include Calorie
+puts "#{translate_calorie_to_joule 199}joule"
