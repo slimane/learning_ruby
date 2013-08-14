@@ -12,8 +12,8 @@ end
 
 
 module Translation
-  def mile_to_km(km)
-    km * 1.60934
+  def mile_to_km(mile = 1)
+    mile * 1.60934
   end
 
 
